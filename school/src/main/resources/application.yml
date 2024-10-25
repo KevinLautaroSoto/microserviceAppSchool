@@ -6,11 +6,11 @@ spring:
     import: optional:file:.env[.properties]
 
   application:
-    name: students
+    name: schools
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: ${DB_URL_STUDENTS}
+    url: ${DB_URL_SCHOOLS}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
   jpa:

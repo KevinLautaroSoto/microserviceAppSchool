@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: my_postgres_schoolDb
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: schools
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data.dialect.PostgreSQLDialect

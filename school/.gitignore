@@ -32,6 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 .idea/
-postgres/*.sql
-postgres_data
+postgre/*.sql
+postgres_data/
 .env
