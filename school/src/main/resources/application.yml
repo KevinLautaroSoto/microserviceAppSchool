@@ -1,12 +1,16 @@
 server:
-  port: 8090
+  port: 8070
 
 spring:
   config:
     import: optional:file:.env[.properties]
 
   application:
-    name: schools
+    name: students
+
+    config:
+      student-url: http://localhost:8090
+      import: optional:configserver:http://localhost:8889
 
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -18,3 +22,10 @@ spring:
       ddl-auto: create
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

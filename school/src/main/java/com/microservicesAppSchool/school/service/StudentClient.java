@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "student-service", url = "${application.config.students-url")
+@FeignClient(name = "student-service", url = "${spring.application.config.student-url}")
 public interface StudentClient {
 
     @GetMapping("/school/{school-id}")
